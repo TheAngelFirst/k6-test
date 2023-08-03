@@ -1,5 +1,3 @@
-// Creator: Grafana k6 Browser Recorder 1.0.1
-
 import { findBetween } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js';
 import { sleep, group, check } from 'k6'
 import http from 'k6/http'
@@ -41,8 +39,6 @@ export function apitest() {
         response = http.get(config.HOST, {
             headers: {
                 'content-type': 'text/html',
-                dnt: '1',
-                'upgrade-insecure-requests': '1',
                 'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "YaBrowser";v="23"',
                 'sec-ch-ua-mobile': '?0',
                 'sec-ch-ua-platform': '"Windows"',
@@ -66,7 +62,6 @@ export function apitest() {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    dnt: '1',
                     'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "YaBrowser";v="23"',
                     'sec-ch-ua-mobile': '?0',
                     'sec-ch-ua-platform': '"Windows"',

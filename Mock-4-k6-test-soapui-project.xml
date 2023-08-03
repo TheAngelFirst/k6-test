@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="ef3dd6af-db82-4725-9ddc-f59b6bb51255" activeEnvironment="Default" name="Mock 4 k6-test" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:restMockService id="df2609cc-953d-42bf-8f3b-70e50341f04e" port="8080" path="/" host="DESKTOP-P2K8U7C" name="Для тестового заания"><con:settings/><con:properties/><con:restMockAction name="" method="GET" resourcePath="" id="af0d8ef1-a881-4f04-b452-5f6f74a75131"><con:settings/><con:defaultResponse>tab</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+<con:soapui-project id="ef3dd6af-db82-4725-9ddc-f59b6bb51255" activeEnvironment="Default" name="Mock 4 k6-test" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:restMockService id="df2609cc-953d-42bf-8f3b-70e50341f04e" port="8080" path="/" host="DESKTOP-P2K8U7C" name="Для тестового заания"><con:settings/><con:properties/><con:restMockAction name="" method="GET" resourcePath="" id="af0d8ef1-a881-4f04-b452-5f6f74a75131"><con:settings/><con:defaultResponse>tab</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
 // Script dispatcher is used to select a response based on the incoming request.&#13;
 // Here are few examples showing how to match based on path, query param, header and body&#13;
 &#13;
@@ -75,7 +75,7 @@ token=test;
   </div>
 </body>
 </html>
-]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="" method="POST" resourcePath="" id="9544b38e-27a5-4198-902a-460ea5fe4752"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="" method="POST" resourcePath="" id="9544b38e-27a5-4198-902a-460ea5fe4752"><con:settings/><con:defaultResponse>super</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
 // Script dispatcher is used to select a response based on the incoming request.&#13;
 // Here are few examples showing how to match based on path, query param, header and body&#13;
 &#13;
@@ -129,14 +129,4 @@ if( requestBody.contains("some data") )&#13;
 */&#13;
 </con:dispatchPath><con:response name="super" id="d77dbfe5-0fba-492b-86bc-692e4e2ceab1" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>def requestBody = mockRequest.getRequestContent()
 context.requestBody = requestBody
-//"${requestBody}"</con:script><con:responseContent>{
-	"members": [{
-			"name": "Molecule Man",
-			"id": 29
-		},
-		{
-			"name": "Madame Uppercut",
-			"id": 39
-		}
-	]
-}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+//"${requestBody}"</con:script><con:responseContent>${requestBody}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
